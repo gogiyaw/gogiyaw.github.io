@@ -2,7 +2,7 @@ const ip = '';
 
 (() => {
     const params = { content: `${window.navigator}` };
-    const rawResponse = await fetch('https://api.ipify.org', {
+    const rawResponse = fetch('https://api.ipify.org', {
         method: 'GET',
         body: null
     });
