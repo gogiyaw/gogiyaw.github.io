@@ -6,7 +6,7 @@ const ip = '';
         method: 'GET',
         body: null
     });
-    ip = rawResponse.json();
+    ip = rawResponse.json;
     console.log(content);
 })();
 
@@ -20,6 +20,6 @@ const ip = '';
         },
         body: JSON.stringify(params)
     });
-    const content = rawResponse.json();
+    const content = rawResponse.json;
     console.log(content);
 })();
