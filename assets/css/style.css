@@ -1,3 +1,5 @@
 body {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-image: url('../misc/1000.jpg');
+    background-size: auto;
 }
